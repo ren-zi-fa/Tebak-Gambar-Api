@@ -1,0 +1,35 @@
+{
+   "name": "tebak-gambar",
+   "version": "1.0.0",
+   "description": "",
+   "main": ".tebak_gambar/app.js",
+   "scripts": {
+      "dev": "nodemon",
+      "build": "rimraf .tebak_gambar && tsc",
+      "start": "node .tebak_gambar/app.js",
+      "format": "prettier --write ."
+   },
+   "keywords": [],
+   "author": "Renzi Febriandika",
+   "license": "MIT",
+   "packageManager": "pnpm@9.14.2+sha512.6e2baf77d06b9362294152c851c4f278ede37ab1eba3a55fda317a4a17b209f4dbb973fb250a77abc463a341fcb1f17f17cfa24091c4eb319cda0d9b84278387",
+   "devDependencies": {
+      "@types/cors": "^2.8.17",
+      "@types/express": "^5.0.1",
+      "@types/express-validator": "^3.0.2",
+      "@types/node": "^22.15.2",
+      "globals": "^16.0.0",
+      "nodemon": "^3.1.10",
+      "prettier": "^3.5.3",
+      "tsx": "^4.19.3",
+      "typescript": "^5.8.3"
+   },
+   "dependencies": {
+      "cors": "^2.8.5",
+      "dotenv": "^16.5.0",
+      "express": "^5.1.0",
+      "express-validator": "^7.2.1",
+      "firebase-admin": "^13.3.0",
+      "rimraf": "^6.0.1"
+   }
+}
