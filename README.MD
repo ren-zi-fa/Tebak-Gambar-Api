@@ -16,7 +16,7 @@ GET /api/question
 | Parameter | Type   | Required | Description                                                          | Example          |
 |-----------|--------|----------|----------------------------------------------------------------------|------------------|
 | category  | string | Yes      | Kategori soal yang diinginkan. Pilihan: `anime`, `jav`, `genshin`.   | `category=anime` |
-| total     | number | No       | Jumlah soal yang ingin diambil (default: 5, maksimum: 10).           | `total=5`        |
+| total     | number | No       | Jumlah soal yang ingin diambil (default: 1, maksimum: 10).           | `total=5`        |
 
 ## 🎭 Genre (Category) Options
 
@@ -90,7 +90,6 @@ GET https://tebak-gambar-api.vercel.app/api/question?category=anime&total=3
 
 ## 📖 Notes
 
-- Jika total tidak diisi, default-nya 5.
 - Maksimal soal yang bisa diambil dalam satu request adalah 10.
 - Semua URL gambar adalah link langsung yang bisa di-embed di frontend quiz app.
 
