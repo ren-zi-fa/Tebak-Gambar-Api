@@ -63,7 +63,7 @@ async function seed() {
       },
       {
          id: 6,
-         question: 'diamanakah lokasi gambar ini?',
+         question: 'dimanakah lokasi gambar ini?',
          url_img:
             'https://res.cloudinary.com/dschnntvt/image/upload/v1746430089/20250505141736_a2c7o2.png',
          correct_answer: 'Qingce Village',
@@ -71,7 +71,7 @@ async function seed() {
       },
       {
          id: 7,
-         question: 'diamanakah lokasi gambar ini?',
+         question: 'dimanakah lokasi gambar ini?',
          url_img:
             'https://res.cloudinary.com/dschnntvt/image/upload/v1746430093/20250505141959_fowj6l.png',
          correct_answer: 'Teapot',
@@ -83,7 +83,7 @@ async function seed() {
       },
       {
          id: 8,
-         question: 'diamanakah lokasi gambar ini?',
+         question: 'dimanakah lokasi gambar ini?',
          url_img:
             'https://res.cloudinary.com/dschnntvt/image/upload/v1746430094/20250505142100_y62iwl.png',
          correct_answer: 'Ritou',
@@ -91,7 +91,7 @@ async function seed() {
       },
       {
          id: 9,
-         question: 'diamanakah lokasi gambar ini?',
+         question: 'dimanakah lokasi gambar ini?',
          url_img:
             'https://res.cloudinary.com/dschnntvt/image/upload/v1746430092/20250505141852_szxus6.png',
          correct_answer: 'Wang Shu In',
@@ -99,7 +99,7 @@ async function seed() {
       },
       {
          id: 10,
-         question: 'diamanakah lokasi gambar ini?',
+         question: 'dimanakah lokasi gambar ini?',
          url_img:
             'https://res.cloudinary.com/dschnntvt/image/upload/v1746430092/20250505140751_ueil43.png',
          correct_answer: 'Bayda Harbour',
