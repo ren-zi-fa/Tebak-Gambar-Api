@@ -88,6 +88,47 @@ async function seed() {
             'https://res.cloudinary.com/dschnntvt/image/upload/v1746423844/images_5_csguna.jpg',
          correct_answer: 'Emi Fukada',
          incorrect_answer: ['Mao Hamasaki', 'Miyuki Alice', 'Erika Momotani']
+      },
+
+      {
+         id: 11,
+         question: 'siapakah yang ada di gambar tersebut?',
+         url_img:
+            'hhttps://res.cloudinary.com/dschnntvt/image/upload/v1746462460/takakato_mtlqcx.webp',
+         correct_answer: 'Taka Kato',
+         incorrect_answer: ['Toru Ozawa', 'Date masamune', 'Echiro Oda']
+      },
+      {
+         id: 12,
+         question: 'siapakah yang ada di gambar tersebut?',
+         url_img:
+            'https://res.cloudinary.com/dschnntvt/image/upload/v1746462692/toruu_wve0jr.webp',
+         correct_answer: 'Toru Ozawa',
+         incorrect_answer: ['Taka Kato', 'Shigeo Tokuda', 'Tokugawa Shigeshige']
+      },
+      {
+         id: 13,
+         question: 'siapakah yang ada di gambar tersebut?',
+         url_img:
+            'https://res.cloudinary.com/dschnntvt/image/upload/v1746462845/download_ypbgtj.jpg',
+         correct_answer: 'Hana Shirato',
+         incorrect_answer: ['Yu Shinoda', 'Shuzu Hanjo', 'Sora Aoi']
+      },
+      {
+         id: 14,
+         question: 'siapakah yang ada di gambar tersebut?',
+         url_img:
+            'https://res.cloudinary.com/dschnntvt/image/upload/v1746463021/images_2_kuikmt.jpg',
+         correct_answer: 'Ameri Ichinose',
+         incorrect_answer: ['Yu Shinoda', 'Shuzu Hanjo', 'Sora Aoi']
+      },
+      {
+         id: 15,
+         question: 'siapakah yang ada di gambar tersebut?',
+         url_img:
+            'https://res.cloudinary.com/dschnntvt/image/upload/v1746463079/images_3_confa0.jpg',
+         correct_answer: 'Yu Shinoda',
+         incorrect_answer: ['Ameri Ichinose', 'Hana Shirato', 'Shuzu Hanjo']
       }
    ]
 
@@ -106,7 +147,6 @@ async function seed() {
       results.push(docRef.id) // simpan ID baru
    }
 
- 
    try {
       await batch.commit()
       console.log('✅ Seeding selesai!', results)

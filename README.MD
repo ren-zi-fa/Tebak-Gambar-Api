@@ -1,68 +1,97 @@
-# Panduan Kontribusi 🔧
+# 📸 Tebak Gambar API Documentation
 
-## Langkah-langkah
+API ini menyediakan endpoint untuk mendapatkan data soal tebak gambar berdasarkan kategori tertentu.
 
-### 1️⃣ Buat Branch Baru
-Gunakan konvensi:
+## ✨ Endpoint
+
+**Base URL:**  
+https://tebak-gambar-api.vercel.app/api/question
+
 ```
-feat/<deskripsi-singkat>
-```
-
-Contoh:
-```bash
-git checkout -b feat/tebakan-example
-```
-➡️ `tebakan-example` = deskripsi singkat tebakan yang lo tambahkan.
-
-### 2️⃣ Tambahkan Data di File Seed
-Cari array:
-```ts
-const Genhsin_Impact: Genhsin[] = [
-   // data lama di sini
-]
+GET /api/question
 ```
 
-Tambahkan item baru di bawahnya dengan format seperti ini:
-```ts
+## 📝 Query Parameters
+
+| Parameter | Type   | Required | Description                                                          | Example          |
+|-----------|--------|----------|----------------------------------------------------------------------|------------------|
+| category  | string | Yes      | Kategori soal yang diinginkan. Pilihan: `anime`, `jav`, `genshin`.   | `category=anime` |
+| total     | number | No       | Jumlah soal yang ingin diambil (default: 5, maksimum: 10).           | `total=5`        |
+
+## 🎭 Genre (Category) Options
+
+| Category | Description                         |
+|----------|-------------------------------------|
+| anime    | Gambar dari anime/anime character.  |
+| jav      | Gambar dari artis JAV.              |
+| genshin  | Gambar karakter dari Genshin Impact.|
+
+## 📦 Response Format
+
+```json
 {
-   id: <NUMBER>, // lanjutkan ID terakhir
-   question: 'Dimanakah lokasi gambar ini?',
-   url_img: 'https://your-cloudinary-url.png',
-   correct_answer: 'Jawaban Benar',
-   incorrect_answer: ['Salah 1', 'Salah 2', 'Salah 3']
+  "success": true,
+  "data": {
+    "category": "anime",
+    "data": [
+      {
+        "id": 3,
+        "question": "Tebak Judul Anime berdasarkan gambar Berikut !",
+        "url_img": "https://res.cloudinary.com/dschnntvt/image/upload/v1746463477/Dress-blue_p92f4k.webp",
+        "correct_answer": "Dearest Blue",
+        "incorrect_answer": [
+          "Anehame",
+          "Inshitsu Otaku ni Ikareru Kanoj",
+          "Otaku ni Yasashii Gal toka"
+        ]
+      },
+      {
+        "id": 4,
+        "question": "Tebak Judul Anime berdasarkan gambar Berikut !",
+        "url_img": "https://res.cloudinary.com/dschnntvt/image/upload/v1746463477/AnotherImage.webp",
+        "correct_answer": "Attack on Titan",
+        "incorrect_answer": [
+          "Bleach",
+          "Naruto",
+          "One Piece"
+        ]
+      }
+      // ...hingga total N sesuai request
+    ]
+  }
 }
 ```
 
-✅ Pastikan:
-- ID unik & urut.
-- `incorrect_answer` SELALU isi 3 item.
-- URL gambar valid & dicek di browser.
+## 🔍 Field Descriptions
 
-### 3️⃣ Commit Perubahan
-Ikuti format commit message:
+| Field | Type | Description |
+|-------|------|-------------|
+| success | boolean | Status sukses atau tidak. |
+| data.category | string | Kategori yang diminta (anime, jav, genshin). |
+| data.data | array | Array soal sesuai jumlah permintaan. |
+| └ id | number | ID unik untuk soal. |
+| └ question | string | Teks pertanyaan. |
+| └ url_img | string | URL gambar yang harus ditebak. |
+| └ correct_answer | string | Jawaban yang benar. |
+| └ incorrect_answer | string[] | Array dari jawaban yang salah (biasanya 3 item). |
+
+## ⚠️ Error Responses
+
+| HTTP Code | Response Example | Description |
+|-----------|------------------|-------------|
+| 400 | `{ "success": false, "message": "Invalid category. Must be one of: anime, jav, genshin." }` | Jika kategori tidak valid. |
+| 500 | `{ "success": false, "message": "Internal server error." }` | Kesalahan server. |
+
+## ✅ Example Request
+
 ```bash
-git add .
-git commit -m "feat: tambah tebakan gambar <deskripsi-singkat>"
+GET https://tebak-gambar-api.vercel.app/api/question?category=anime&total=3
 ```
 
-➡️ Contoh:
-```bash
-git commit -m "feat: tambah tebakan gambar Stormterror Lair"
-```
+## 📖 Notes
 
-### 4️⃣ Push Branch
-```bash
-git push origin feat/tebakan-example
-```
+- Jika total tidak diisi, default-nya 5.
+- Maksimal soal yang bisa diambil dalam satu request adalah 10.
+- Semua URL gambar adalah link langsung yang bisa di-embed di frontend quiz app.
 
-### 5️⃣ Buat Pull Request (PR)
-Judul PR:
-```
-feat: tambah tebakan gambar <deskripsi-singkat>
-```
 
-Deskripsi:
-Jelaskan:
-- Apa yang ditambahin.
-- Screenshot jika perlu.
-- Checklist validasi (data, gambar, dll).

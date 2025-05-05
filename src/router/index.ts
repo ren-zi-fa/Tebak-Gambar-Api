@@ -8,7 +8,7 @@ router.get(
    '/question',
    [
       query('category').notEmpty().isString(),
-      query('total').notEmpty().isInt({ min: 1, max: 10 })
+      query('total').notEmpty().isInt({ min: 1, max: 15 })
    ],
    questionController.question
 )
