@@ -9,10 +9,10 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.TebakWilayahGenshin = void 0;
+exports.TebakAnime = void 0;
 const firebase_1 = require("../config/firebase");
-const TebakWilayahGenshin = (category, total) => __awaiter(void 0, void 0, void 0, function* () {
-    const snapshot = yield firebase_1.db.collection('genshin').get();
+const TebakAnime = (category, total) => __awaiter(void 0, void 0, void 0, function* () {
+    const snapshot = yield firebase_1.db.collection('anime').get();
     const allData = snapshot.docs.map((doc) => (Object.assign({ id: doc.id }, doc.data())));
     // Fisher–Yates Shuffle
     for (let i = allData.length - 1; i > 0; i--) {
@@ -25,5 +25,5 @@ const TebakWilayahGenshin = (category, total) => __awaiter(void 0, void 0, void 
         data
     };
 });
-exports.TebakWilayahGenshin = TebakWilayahGenshin;
-//# sourceMappingURL=genshin.service.js.map
+exports.TebakAnime = TebakAnime;
+//# sourceMappingURL=anime.service.js.map

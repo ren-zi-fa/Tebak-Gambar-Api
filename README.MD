@@ -16,7 +16,7 @@ GET /api/question
 | Parameter | Type   | Required | Description                                                          | Example          |
 |-----------|--------|----------|----------------------------------------------------------------------|------------------|
 | category  | string | Yes      | Kategori soal yang diinginkan. Pilihan: `anime`, `jav`, `genshin`.   | `category=anime` |
-| total     | number | No       | Jumlah soal yang ingin diambil (default: 1, maksimum: 10).           | `total=5`        |
+| total     | number | Yes     | Jumlah soal yang ingin diambil (default: 1, maksimum: 10).           | `total=5`        |
 
 ## 🎭 Genre (Category) Options
 

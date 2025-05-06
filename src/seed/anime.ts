@@ -107,7 +107,7 @@ async function seed() {
          url_img:
             'https://res.cloudinary.com/dschnntvt/image/upload/v1746464753/images_pa1phd.jpg',
          correct_answer: 'Dr Stone',
-         incorrect_answer: ['Boruto', 'Jojo Bizarre', 'One Piece']
+         incorrect_answer: ['Boruto', 'Jojo Bizarre', 'Solo Leveling']
       },
       {
          id: 12,
@@ -115,7 +115,7 @@ async function seed() {
          url_img:
             'https://res.cloudinary.com/dschnntvt/image/upload/v1746464933/sddefault_xcmjs8.jpg',
          correct_answer: 'One Piece',
-         incorrect_answer: ['Boruto', 'Jojo Bizarre', 'One Piece']
+         incorrect_answer: ['Boruto', 'Jojo Bizarre', 'Spy X Family']
       },
       {
          id: 13,
