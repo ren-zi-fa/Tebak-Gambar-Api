@@ -5,11 +5,8 @@ API ini menyediakan endpoint untuk mendapatkan data soal tebak gambar berdasarka
 ## ✨ Endpoint
 
 **Base URL:**  
-https://tebak-gambar-api.vercel.app/api/question
-
-```
-GET /api/question
-```
+https://tebak-gambar-api.vercel.app/api/question?category=${category}&total=${total}
+`
 
 ## 📝 Query Parameters
 
